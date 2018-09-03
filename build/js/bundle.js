@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){});
+"use strict";!function(){var e=document.getElementById("hero-scene"),t=(new Parallax(e),new ScrollMagic.Controller);new ScrollMagic.Scene({triggerElement:"#about-section",offset:100}).setClassToggle("#about-section","active").addTo(t),new ScrollMagic.Scene({triggerElement:"#work-section",offset:100}).setClassToggle("#work-section","active").addTo(t),new ScrollMagic.Scene({triggerElement:"#contact-section",offset:100}).setClassToggle("#contact-section","active").addTo(t)}();

@@ -1,0 +1,77 @@
+.page--home {
+  .hero {
+    height: 100vh;
+    background: map-get($colors, "dark-blue");
+    background-attachment: fixed;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1, h2, h3 {
+      position: relative !important;
+      mix-blend-mode: difference;
+    }
+    h1, h2 {
+      color: map-get($colors, "blue");
+    }
+    h1 {
+      font-size: calc(20vw + 20px);
+      line-height: 1.25;
+    }
+    h2 {
+      font-size: calc(18vw);
+      line-height: 0.75;
+    }
+    h3 {
+      color: map-get($colors, "green");
+      font-family: 'Noto Sans', sans-serif;
+      font-size: calc(1vw + 12px);
+      text-align: right;
+    }
+    .circle {
+      position: absolute !important;
+      top: 10% !important;
+      left: 50px !important;
+      height: calc(30vw + 50px) !important;
+      width: calc(30vw + 50px) !important;
+      border-radius: 50%;
+      background: map-get($colors, "black");
+      z-index: 0;
+    }
+  }
+  .section {
+    height: 150vh;
+    position: relative;
+    @include transition(background-color);
+    .bg-text {
+      font-family: 'Fjalla One', sans-serif;
+      color: map-get($colors, "dark-blue");
+      opacity: 0.35;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 25vw;
+      line-height: 0;
+      transform: translateY(-50%);
+    }
+    &--about {
+      background-color: map-get($colors, "dark-blue");
+      &.active {
+        background-color: map-get($colors, "grey");
+      }
+    }
+    &--work {
+      background-color: map-get($colors, "grey");
+      &.active {
+        background-color: map-get($colors, "blue");
+      }
+    }
+    &--contact {
+      background-color: map-get($colors, "blue");
+      &.active {
+        background-color: map-get($colors, "teal");
+      }
+    }
+  }
+}

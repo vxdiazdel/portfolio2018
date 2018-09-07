@@ -1,8 +1,18 @@
 .page--home {
+  background-color: map-get($colors, "dark-blue");
+  @include transition(background-color);
+  &.about-active {
+    background-color: map-get($colors, "grey");
+  }
+  &.work-active {
+    background-color: map-get($colors, "blue");
+  }
+  &.contact-active {
+    background-color: map-get($colors, "teal");
+  }
   .hero {
     height: 100vh;
-    background: map-get($colors, "dark-blue");
-    background-attachment: fixed;
+    //background: map-get($colors, "dark-blue");
     padding: 20px;
     position: relative;
     display: flex;
@@ -54,24 +64,6 @@
       font-size: 25vw;
       line-height: 0;
       transform: translateY(-50%);
-    }
-    &--about {
-      background-color: map-get($colors, "dark-blue");
-      &.active {
-        background-color: map-get($colors, "grey");
-      }
-    }
-    &--work {
-      background-color: map-get($colors, "grey");
-      &.active {
-        background-color: map-get($colors, "blue");
-      }
-    }
-    &--contact {
-      background-color: map-get($colors, "blue");
-      &.active {
-        background-color: map-get($colors, "teal");
-      }
     }
   }
 }

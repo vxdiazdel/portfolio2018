@@ -7,23 +7,21 @@
   const controller = new ScrollMagic.Controller();
   new ScrollMagic.Scene({ 
     triggerElement: '#about-section',
-    offset: 100,
+    offset: 300
   })
-  .setClassToggle('#about-section', 'active')
+  .setClassToggle('body', 'about-active')
   .addTo(controller);
 
   new ScrollMagic.Scene({
     triggerElement: '#work-section',
-    offset: 100,
   })
-  .setClassToggle('#work-section', 'active')
+  .setClassToggle('body', 'work-active')
   .addTo(controller);
 
   new ScrollMagic.Scene({
     triggerElement: '#contact-section',
-    offset: 100,
   })
-  .setClassToggle('#contact-section', 'active')
+  .setClassToggle('body', 'contact-active')
   .addTo(controller);
 
 

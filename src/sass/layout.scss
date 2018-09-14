@@ -1,23 +1,47 @@
 .page--home {
   background-color: map-get($colors, "dark-blue");
   @include transition(background-color);
-  &.about-active {
-    background-color: map-get($colors, "grey");
-  }
+  &.about-active {}
   &.work-active {
     background-color: map-get($colors, "blue");
   }
   &.contact-active {
     background-color: map-get($colors, "teal");
   }
+  .bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px repeat(2, 1fr) 50px;
+    grid-template-rows: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    &__line {
+      &:not(:first-child) {
+        border-left: 1px solid #fff;
+      }
+      &:not(.line--sm) {
+        display: none;
+      }
+    }
+    @media (min-width: 980px) {
+      grid-template-columns: repeat(6, 1fr);
+      :not(.line--sm) {
+        display: block;
+      }
+    }
+  }
   .hero {
-    height: 100vh;
-    //background: map-get($colors, "dark-blue");
+    min-height: 100vh;
     padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
     h1, h2, h3 {
       position: relative !important;
       mix-blend-mode: difference;
@@ -47,23 +71,40 @@
       width: calc(30vw + 50px) !important;
       border-radius: 50%;
       background: map-get($colors, "black");
-      z-index: 0;
     }
   }
   .section {
-    height: 150vh;
     position: relative;
     @include transition(background-color);
-    .bg-text {
-      font-family: 'Fjalla One', sans-serif;
-      color: map-get($colors, "dark-blue");
-      opacity: 0.35;
+    padding: 200px 0;
+    &__header {
+      font-family: 'Noto Sans', sans-serif;
+      color: map-get($colors, "white");
+      font-size: calc(10vw + 14px);
+      position: relative;
+      line-height: 1;
+      display: block;
+      .header__text {
+        display: block;
+      }
+    }
+    &__counter {
       position: absolute;
-      top: 50%;
-      right: 0;
-      font-size: 25vw;
+      top: -5vw;
+      left: -10vw;
+      opacity: 0.15;
+      font-size: calc(24vw + 20px);
       line-height: 0;
-      transform: translateY(-50%);
+    }
+    &__content {
+      grid-column-start: 3;
+      grid-column-end: -2;
+    }
+  }
+  .section--about {
+    .section__content {
+      color: map-get($colors, "white");
+      font-size: calc(3vw + 12px);
     }
   }
 }

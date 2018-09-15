@@ -32,19 +32,38 @@
   // ScrollMagic
   const controller = new ScrollMagic.Controller();
 
+  // Parallax
+
   const parallaxSections = document.querySelectorAll('.parallax');
 
   parallaxSections.forEach(section => {
     const tl = new TimelineMax();
-    tl.add(TweenMax.to(section.querySelector('.section__counter'), 1, { y: '+=250', ease: Power0.easeNone }));
+    tl.add(TweenMax.to(section.querySelector('.section__counter'), 1, { y: '+=300', ease: Power0.easeNone }));
 
     new ScrollMagic.Scene({
       triggerElement: section,
       duration: '200%',
       triggerHook: 'onEnter'
     })
-    .setClassToggle('body', `${section.dataset.class}-active`)
     .setTween(tl)
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: section,
+    })
+    .setClassToggle('body', `${section.dataset.class}-active`)
+    .addTo(controller);
+  });
+
+  // Image reveal
+
+  const revealImgs = document.querySelectorAll('.reveal');
+
+  revealImgs.forEach(img => {
+    new ScrollMagic.Scene({
+      triggerElement: img
+    })
+    .setClassToggle(img, 'is-visible')
     .addTo(controller);
   });
 

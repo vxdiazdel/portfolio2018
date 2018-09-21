@@ -1,12 +1,24 @@
 .page--home {
   background-color: map-get($colors, "dark-blue");
   @include transition(background-color);
-  &.about-active {}
   &.work-active {
     background-color: map-get($colors, "blue");
+    .section--work {
+      .section__counter {
+        color: map-get($colors, "dark-blue");
+      }
+    }
   }
   &.contact-active {
     background-color: map-get($colors, "teal");
+    .section--contact {
+      .grid__header {
+        color: map-get($colors, "blue");
+      }
+    }
+    .bg-grid__line:not(:first-child) {
+      border-color: map-get($colors, "blue");
+    }
   }
   .bg-grid {
     position: fixed;
@@ -44,7 +56,6 @@
     z-index: 1;
     h1, h2, h3 {
       position: relative !important;
-      mix-blend-mode: difference;
     }
     h1, h2 {
       color: map-get($colors, "blue");
@@ -93,7 +104,7 @@
       top: -5vw;
       left: -10vw;
       opacity: 0.15;
-      font-size: calc(24vw + 20px);
+      font-size: calc(26vw + 20px);
       line-height: 0;
       z-index: -1;
     }
@@ -121,7 +132,18 @@
       }
       img {
         box-shadow: $shadow-z-5;
+        border-radius: $border-radius;
+      }
+      .mopro {
+        height: 500px;
+      }
+      .pixel-motion {
+        height: 370px;
+      }
+      .lolcryptos {
+        height: 450px;
       }
     }
   }
+  .section--contact {}
 }

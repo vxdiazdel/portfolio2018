@@ -10,14 +10,11 @@
     }
   }
   &.contact-active {
-    background-color: map-get($colors, "teal");
+    background-color: map-get($colors, "grey");
     .section--contact {
       .grid__header {
         color: map-get($colors, "blue");
       }
-    }
-    .bg-grid__line:not(:first-child) {
-      border-color: map-get($colors, "blue");
     }
   }
   .bg-grid {
@@ -142,6 +139,40 @@
       }
       .lolcryptos {
         height: 450px;
+      }
+    }
+    .work-item {
+      position: relative;
+      &:hover {
+        .work-item__info {
+          opacity: 1;
+        }
+      }
+      &__info {
+        @include absolute-fill;
+        background: map-get($colors, "dark-blue");
+        color: map-get($colors, "white");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        @include transition(opacity);
+        h4, h5, p {
+          font-family: 'Noto-Sans', sans-serif;
+        }
+        h4 {
+          font-size: calc(3vw + 12px);
+          line-height: 1;
+          font-weight: 100;
+        }
+        h5 {
+          font-size: calc(2vw + 8px);
+          font-weight: 400;
+        }
+        p {
+          font-size: calc(1vw + 6px);
+        }
       }
     }
   }

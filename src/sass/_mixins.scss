@@ -1,3 +1,10 @@
 @mixin transition($elements: all, $speed: $transition-speed, $easing: ease-in-out) {
   transition: $elements $speed $easing;
 }
+@mixin absolute-fill() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

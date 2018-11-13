@@ -79,6 +79,7 @@
       width: calc(30vw + 50px) !important;
       border-radius: 50%;
       background: map-get($colors, "black");
+      display: none;
     }
   }
   .section {
@@ -131,14 +132,16 @@
         box-shadow: $shadow-z-5;
         border-radius: $border-radius;
       }
-      .mopro {
-        height: 500px;
-      }
-      .pixel-motion {
-        height: 370px;
-      }
-      .lolcryptos {
-        height: 450px;
+      @media (min-width: 980px) {
+        .mopro {
+          height: 500px;
+        }
+        .pixel-motion {
+          height: 370px;
+        }
+        .lolcryptos {
+          height: 450px;
+        }
       }
     }
     .work-item {
@@ -176,5 +179,62 @@
       }
     }
   }
-  .section--contact {}
+  .section--contact {
+    .contact-links {
+
+    }
+    .link {
+      display: inline-block;
+      font-size: calc(8vw + 12px);
+      text-decoration: none;
+      color: map-get($colors, "dark-blue");
+      padding: 5px;
+      position: relative;
+      &:hover {
+        &:before {
+          animation: glitch 3s infinite linear alternate-reverse;
+        }
+        &:after {
+          animation: glitch-2 2s infinite linear alternate-reverse;
+        }
+      }
+      &:before {
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 blue;
+        top: 0;
+        color: inherit;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+      }
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        text-shadow: -1px 0 red;
+        top: 0;
+        color: inherit;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+      }
+    }
+  }
+}
+
+@keyframes glitch {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
+  }
+}
+@keyframes glitch-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+    }
+  }
 }

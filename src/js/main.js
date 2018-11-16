@@ -1,7 +1,6 @@
 (function() {
   // Parallax
   const hero = document.querySelector('.hero'),
-        heroCircle = hero.querySelector('.circle'),
         heroH1 = hero.querySelector('h1'),
         heroH2 = hero.querySelector('h2'),
         heroH3 = hero.querySelector('h3'),
@@ -23,7 +22,6 @@
     dx = mouse.x - cx;
     dy = mouse.y - cy;
 
-    TweenMax.to(heroCircle, 1, { transform: `translate(${-dx / 10}px, ${-dy / 10}px)`, ease: Power2.easeOut });
     TweenMax.to(heroH1, 1, { transform: `translate(${-dx / 75}px, ${-dy / 50}px)`, ease: Power2.easeOut });
     TweenMax.to(heroH2, 1, { transform: `translate(${-dx / 40}px, ${-dy / 35}px)`, ease: Power2.easeOut });
     TweenMax.to(heroH3, 1, { transform: `translate(${-dx / 25}px, ${-dy / 75}px)`, ease: Power2.easeOut });

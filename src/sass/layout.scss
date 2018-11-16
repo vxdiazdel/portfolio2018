@@ -71,16 +71,6 @@
       font-size: calc(1vw + 12px);
       text-align: right;
     }
-    .circle {
-      position: absolute !important;
-      top: 10% !important;
-      left: 50px !important;
-      height: calc(30vw + 50px) !important;
-      width: calc(30vw + 50px) !important;
-      border-radius: 50%;
-      background: map-get($colors, "black");
-      display: none;
-    }
   }
   .section {
     position: relative;

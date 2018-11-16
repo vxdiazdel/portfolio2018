@@ -89,12 +89,13 @@
     }
     &__counter {
       position: absolute;
-      top: -5vw;
-      left: -10vw;
+      top: -75px;
+      left: -100px;
       opacity: 0.15;
       font-size: calc(26vw + 20px);
       line-height: 0;
       z-index: -1;
+      user-select: none;
     }
     &__content {
       grid-column-start: 3;
@@ -106,8 +107,22 @@
       color: map-get($colors, "white");
       font-size: calc(3vw + 12px);
     }
+    .text-design {
+      font-family: cursive;
+    }
+    .text-develop {
+      font-family: 'Courier New', Courier, monospace;
+    }
   }
   .section--work {
+    .grid__item {
+      &:not(:first-child) {
+        margin-top: 100px;
+        @media (min-width: 980px) {
+          margin-top: 200px;
+        }
+      }
+    }
     .reveal {
       opacity: 0;
       visibility: hidden;
@@ -136,7 +151,9 @@
     }
     .work-item {
       position: relative;
+      transition: .5s;
       &:hover {
+        transform: scale(1.1);
         .work-item__info {
           opacity: 1;
         }
@@ -150,6 +167,7 @@
         align-items: center;
         flex-direction: column;
         opacity: 0;
+        border-radius: $border-radius;
         @include transition(opacity);
         h4, h5, p {
           font-family: 'Noto-Sans', sans-serif;

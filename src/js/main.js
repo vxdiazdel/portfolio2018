@@ -36,7 +36,7 @@
 
   parallaxSections.forEach(section => {
     const tl = new TimelineMax();
-    tl.add(TweenMax.to(section.querySelector('.section__counter'), 1, { y: '+=350', ease: Power0.easeNone }));
+    tl.add(TweenMax.to(section.querySelector('.section__counter'), 1, { y: '+=200', ease: Power0.easeNone }));
 
     new ScrollMagic.Scene({
       triggerElement: section,

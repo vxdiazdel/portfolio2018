@@ -24,7 +24,7 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 50px repeat(2, 1fr) 50px;
+    grid-template-columns: 25px repeat(2, 1fr) 25px;
     grid-template-rows: 100%;
     opacity: 0.2;
     z-index: -1;
@@ -44,13 +44,16 @@
     }
   }
   .hero {
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 1;
+    @media (min-width: 980px) {
+      min-height: 100vh;
+    }
     h1, h2, h3 {
       position: relative !important;
     }
@@ -75,11 +78,14 @@
   .section {
     position: relative;
     @include transition(background-color);
-    padding: 200px 0;
+    padding: 100px 0;
+    @media (min-width: 980px) {
+      padding: 200px 0;
+    }
     &__header {
       font-family: 'Noto Sans', sans-serif;
       color: map-get($colors, "white");
-      font-size: calc(10vw + 14px);
+      font-size: calc(10vw + 24px);
       position: relative;
       line-height: 1;
       display: block;
@@ -89,8 +95,8 @@
     }
     &__counter {
       position: absolute;
-      top: -75px;
-      left: -100px;
+      top: -10%;
+      left: -10%;
       opacity: 0.15;
       font-size: calc(26vw + 20px);
       line-height: 0;
@@ -136,6 +142,7 @@
       img {
         box-shadow: $shadow-z-5;
         border-radius: $border-radius;
+        transition: .5s;
       }
       @media (min-width: 980px) {
         .mopro {
@@ -152,15 +159,18 @@
     .work-item {
       position: relative;
       transition: .5s;
+      overflow: hidden;
       &:hover {
-        transform: scale(1.1);
+        img {
+          transform: scale(1.1);
+        }
         .work-item__info {
           opacity: 1;
         }
       }
       &__info {
         @include absolute-fill;
-        background: map-get($colors, "dark-blue");
+        background: rgba(map-get($colors, "dark-blue"), 0.85);
         color: map-get($colors, "white");
         display: flex;
         justify-content: center;
@@ -189,7 +199,7 @@
   }
   .section--contact {
     .contact-links {
-
+      grid-column-start: 3;
     }
     .link {
       display: inline-block;
@@ -200,17 +210,17 @@
       position: relative;
       &:hover {
         &:before {
-          animation: glitch 3s infinite linear alternate-reverse;
+          animation: glitch 2s infinite linear alternate-reverse;
         }
         &:after {
-          animation: glitch-2 2s infinite linear alternate-reverse;
+          animation: glitch-2 1s infinite linear alternate-reverse;
         }
       }
       &:before {
         content: attr(data-text);
         position: absolute;
-        left: -2px;
-        text-shadow: 1px 0 map-get($colors, "blue");
+        left: -1px;
+        text-shadow: 2px 0 map-get($colors, "blue");
         top: 0;
         color: inherit;
         overflow: hidden;
@@ -219,8 +229,8 @@
       &:after {
         content: attr(data-text);
         position: absolute;
-        left: 2px;
-        text-shadow: -1px 0 map-get($colors, "green");
+        left: 1px;
+        text-shadow: -2px 0 map-get($colors, "green");
         top: 0;
         color: inherit;
         overflow: hidden;

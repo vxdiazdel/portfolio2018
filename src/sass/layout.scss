@@ -95,13 +95,16 @@
     }
     &__counter {
       position: absolute;
-      top: -10%;
+      top: -75%;
       left: -10%;
       opacity: 0.15;
-      font-size: calc(26vw + 20px);
+      font-size: calc(26vw + 24px);
       line-height: 0;
       z-index: -1;
       user-select: none;
+      @media (min-width: 768px) {
+        top: -10%;
+      }
     }
     &__content {
       grid-column-start: 3;

@@ -203,9 +203,10 @@
   .section--contact {
     .contact-links {
       grid-column-start: 3;
+      grid-column-end: -1;
     }
     .link {
-      display: inline-block;
+      display: block;
       font-size: calc(8vw + 12px);
       text-decoration: none;
       color: map-get($colors, "dark-blue");

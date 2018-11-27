@@ -17,6 +17,17 @@
       }
     }
   }
+  // Page loaded animations
+  &.loaded {
+    .bg-grid__line {
+      transform: scaleY(1);
+    }
+    .hero {
+      h1, h2, h3 {
+        opacity: 1;
+      }
+    }
+  }
   .bg-grid {
     position: fixed;
     top: 0;
@@ -29,6 +40,14 @@
     opacity: 0.2;
     z-index: -1;
     &__line {
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: $transition-speed * 2;
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{$i * .1}s;
+        }
+      }
       &:not(:first-child) {
         border-left: 1px solid #fff;
       }
@@ -44,18 +63,18 @@
     }
   }
   .hero {
-    min-height: 50vh;
+    min-height: 100vh;
     padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 1;
-    @media (min-width: 980px) {
-      min-height: 100vh;
-    }
     h1, h2, h3 {
       position: relative !important;
+      opacity: 0;
+      @include transition(opacity, $transition-speed * 3);
+      transition-delay: $transition-speed * 1.5;
     }
     h1, h2 {
       color: map-get($colors, "blue");

@@ -1,4 +1,7 @@
 (function() {
+
+  window.addEventListener('load', () => document.body.classList.add('loaded'));
+
   // Parallax
   const hero = document.querySelector('.hero'),
         heroH1 = hero.querySelector('h1'),

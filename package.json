@@ -1,7 +1,7 @@
 {
-  "name": "Gulp-Boilerplate",
+  "name": "portfolio-2018",
   "version": "0.0.1",
-  "description": "Gulp and SASS boilerplate",
+  "description": "Portfolio",
   "main": "index.js",
   "scripts": {
     "start": "gulp",

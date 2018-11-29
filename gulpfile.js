@@ -77,3 +77,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['scripts', 'styles', 'images', 'reload']);
 gulp.task('dev', ['scripts', 'styles', 'images', 'html', 'watch']);
+gulp.task('build', ['scripts', 'styles', 'images', 'html']);

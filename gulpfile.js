@@ -67,14 +67,6 @@ gulp.task('reload', ['browser-sync'], function() {
 	gulp.watch(['*.html', './src/js/**/*.js', './src/sass/**/*.scss']).on('change', browserSync.reload);
 });
 
-// Watch task
-gulp.task('watch', function() {
-	gulp.watch('./src/js/**/*.js', ['scripts']);
-	gulp.watch('./src/sass/**/*.scss', ['styles']);
-	gulp.watch('./src/img/*', ['images']);
-	gulp.watch('*.html', ['html']);
-});
-
 gulp.task('default', ['scripts', 'styles', 'images', 'reload']);
 gulp.task('dev', ['scripts', 'styles', 'images', 'html', 'watch']);
-gulp.task('build', ['scripts', 'styles', 'images', 'html']);
+gulp.task('build', ['scripts', 'styles', 'images']);

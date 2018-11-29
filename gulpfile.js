@@ -47,7 +47,7 @@ gulp.task('images', function() {
 gulp.task('html', function() {
 	gulp.src('*.html')
 		.pipe(plumber())
-		.pipe(gulp.dest('./public'));
+		.pipe(gulp.dest('./build'));
 });
 
 // Browser Sync

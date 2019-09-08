@@ -1,121 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Victor Diaz de Leon</title>
-	<link rel="icon" href="favicon.ico">
-	<link rel="stylesheet" href="build/css/main.css">
-	<!-- Modernizr JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-</head>
-<body class="page page--home">
-	<div class="bg-grid">
-		<div class="bg-grid__line line--sm"></div>
-		<div class="bg-grid__line line--sm"></div>
-		<div class="bg-grid__line line--sm"></div>
-		<div class="bg-grid__line line--sm"></div>
-		<div class="bg-grid__line"></div>
-		<div class="bg-grid__line"></div>
-	</div>
-	<section class="hero" id="hero-scene">
-		<h1>Victor</h1> 
-		<h2>Diaz de Leon</h2>
-		<h3 class="mt-10">Front End Developer</h3>
-	</section>
-	<section class="section section--about parallax mt-150" id="about-section" data-class="about">
-		<div class="grid">
-			<h4 class="grid__header section__header">
-				<span class="section__counter">01</span>
-				<span class="header__text">About Me</span>
-			</h4>
-			<div class="section__content mt-50">
-				<p>Hi, I'm Victor.</p>
-				<p>I like to <span class="text-design">design</span> and <span class="text-develop">develop</span> things for the web.</p>
-			</div>
-		</div>
-	</section>
-	<section class="section section--work parallax mt-100" id="work-section" data-class="work">
-		<div class="grid">
-			<h4 class="grid__header section__header"><span class="section__counter">02</span>Work</h4>
-			<div class="grid__item offset-2 span-4 mt-150 reveal">
-				<div class="work-item">
-					<a href="https://www.mopro.com" target="_blank">
-						<img class="mopro" src="build/img/mopro.png">
-						<div class="work-item__info">
-							<h4>Mopro</h4>
-							<h5>Lead Front End Developer</h5>
-							<p>2016 - Present</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="grid__item span-3 reveal">
-				<div class="work-item">
-					<a href="https://www.pixelmotion.com" target="_blank">
-						<img class="pixel-motion" src="build/img/pixel-motion.png">
-						<div class="work-item__info">
-							<h4>Pixel Motion</h4>
-							<h5>Web Developer</h5>
-							<p>2015 - 2016</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="grid__item offset-2 span-3 reveal">
-				<div class="work-item">
-					<a href="https://amerisleep-demo.netlify.com/" target="_blank">
-						<img src="build/img/amerisleep.png" class="amerisleep">
-						<div class="work-item__info">
-							<h4>Amerisleep</h4>
-							<h5>Freelance Web Development</h5>
-							<p>2018 - Present</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="grid__item offset-1 span-4 reveal">
-				<div class="work-item">
-					<a href="https://seaofseven.com/pages/lookbook" target="_blank">
-						<img src="build/img/sea-of-seven.png" class="sea-of-seven">
-						<div class="work-item__info">
-							<h4>Sea of Seven</h4>
-							<h5>Freelance Web Development</h5>
-							<p>2018 - Present (In Progress)</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="grid__item offset-2 span-3 reveal">
-				<div class="work-item">
-					<a href="https://chrome.google.com/webstore/detail/tab-splash/gkhdlolhaeleefkkigfkaandgakbodjl" target="_blank">
-						<img class="tab-splash" src="build/img/tab-splash.png">
-						<div class="work-item__info">
-							<h4>Tab Splash</h4>
-							<h5>Google Chrome Extension</h5>
-							<p>2018</p>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section section--contact parallax mt-100" id="contact-section" data-class="contact">
-		<div class="grid">
-			<h4 class="grid__header section__header"><span class="section__counter">03</span>Contact</h4>
-			<div class="contact-links mt-50">
-				<a href="mailto:vrdiazdel@gmail.com" class="link mt-50" data-text="Email">Email</a>
-				<a href="https://www.github.com/vxdiazdel" target="_blank" class="link mt-50" data-text="GitHub">GitHub</a>
-				<a href="https://codepen.io/vxdiazdel/" target="_blank" class="link mt-50" data-text="CodePen">CodePen</a>
-				<a href="https://www.producthunt.com/@vxdiazdel/made" target="_blank" class="link mt-50" data-text="Product Hunt">Product Hunt</a>
-			</div>
-		</div>
-	</section>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-	<script src="build/js/bundle.js"></script>	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Victor Diaz de Leon</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="build/css/main.css" />
+    <!-- Modernizr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <body class="page page--home">
+    <div class="bg-grid">
+      <div class="bg-grid__line line--sm"></div>
+      <div class="bg-grid__line line--sm"></div>
+      <div class="bg-grid__line line--sm"></div>
+      <div class="bg-grid__line line--sm"></div>
+      <div class="bg-grid__line"></div>
+      <div class="bg-grid__line"></div>
+    </div>
+    <section class="hero" id="hero-scene">
+      <h1>Victor</h1>
+      <h2>Diaz de Leon</h2>
+      <h3 class="mt-10">Front End Developer</h3>
+    </section>
+    <section
+      class="section section--about parallax mt-150"
+      id="about-section"
+      data-class="about"
+    >
+      <div class="grid">
+        <h4 class="grid__header section__header">
+          <span class="section__counter">01</span>
+          <span class="header__text">About Me</span>
+        </h4>
+        <div class="section__content mt-50">
+          <p>Hi, I'm Victor.</p>
+          <p>
+            I like to <span class="text-design">design</span> and
+            <span class="text-develop">develop</span> things for the web.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section section--work parallax mt-100"
+      id="work-section"
+      data-class="work"
+    >
+      <div class="grid">
+        <h4 class="grid__header section__header">
+          <span class="section__counter">02</span>Work
+        </h4>
+        <div class="grid__item offset-2 span-3 mt-150 reveal">
+          <div class="work-item">
+            <a href="https://www.mopro.com" target="_blank">
+              <img class="mopro" src="build/img/mopro.png" />
+              <div class="work-item__info">
+                <h4>Mopro</h4>
+                <h5>Lead Front End Developer</h5>
+                <p>2016 - Present</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid__item span-3 reveal">
+          <div class="work-item">
+            <a href="https://www.pixelmotion.com" target="_blank">
+              <img class="pixel-motion" src="build/img/pixel-motion.png" />
+              <div class="work-item__info">
+                <h4>Pixel Motion</h4>
+                <h5>Web Developer</h5>
+                <p>2015 - 2016</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid__item offset-2 span-3 reveal">
+          <div class="work-item">
+            <a href="https://amerisleep-demo.netlify.com/" target="_blank">
+              <img src="build/img/amerisleep.png" class="amerisleep" />
+              <div class="work-item__info">
+                <h4>Amerisleep</h4>
+                <h5>Freelance Web Development</h5>
+                <p>2018 - Present</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid__item offset-1 span-4 reveal">
+          <div class="work-item">
+            <a href="https://seaofseven.com/pages/lookbook" target="_blank">
+              <img src="build/img/sea-of-seven.png" class="sea-of-seven" />
+              <div class="work-item__info">
+                <h4>Sea of Seven</h4>
+                <h5>Freelance Web Development</h5>
+                <p>2018 - Present (In Progress)</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid__item offset-1 span-3 reveal">
+          <div class="work-item">
+            <a
+              href="https://chrome.google.com/webstore/detail/tab-splash/gkhdlolhaeleefkkigfkaandgakbodjl"
+              target="_blank"
+            >
+              <img class="tab-splash" src="build/img/tab-splash.png" />
+              <div class="work-item__info">
+                <h4>Tab Splash</h4>
+                <h5>Google Chrome Extension</h5>
+                <p>2018</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section section--contact parallax mt-100"
+      id="contact-section"
+      data-class="contact"
+    >
+      <div class="grid">
+        <h4 class="grid__header section__header">
+          <span class="section__counter">03</span>Contact
+        </h4>
+        <div class="contact-links mt-50">
+          <a
+            href="mailto:vrdiazdel@gmail.com"
+            class="link mt-50"
+            data-text="Email"
+            >Email</a
+          >
+          <a
+            href="https://www.github.com/vxdiazdel"
+            target="_blank"
+            class="link mt-50"
+            data-text="GitHub"
+            >GitHub</a
+          >
+          <a
+            href="https://codepen.io/vxdiazdel/"
+            target="_blank"
+            class="link mt-50"
+            data-text="CodePen"
+            >CodePen</a
+          >
+          <a
+            href="https://www.producthunt.com/@vxdiazdel/made"
+            target="_blank"
+            class="link mt-50"
+            data-text="Product Hunt"
+            >Product Hunt</a
+          >
+        </div>
+      </div>
+    </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="build/js/bundle.js"></script>
+  </body>
 </html>

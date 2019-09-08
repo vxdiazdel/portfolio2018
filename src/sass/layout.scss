@@ -23,7 +23,9 @@
       transform: scaleY(1);
     }
     .hero {
-      h1, h2, h3 {
+      h1,
+      h2,
+      h3 {
         opacity: 1;
       }
     }
@@ -45,7 +47,7 @@
       transition: $transition-speed * 2;
       @for $i from 1 through 6 {
         &:nth-child(#{$i}) {
-          transition-delay: #{$i * .1}s;
+          transition-delay: #{$i * 0.1}s;
         }
       }
       &:not(:first-child) {
@@ -70,13 +72,16 @@
     flex-direction: column;
     justify-content: center;
     z-index: 1;
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       position: relative !important;
       opacity: 0;
       @include transition(opacity, $transition-speed * 3);
       transition-delay: $transition-speed * 1.5;
     }
-    h1, h2 {
+    h1,
+    h2 {
       color: map-get($colors, "blue");
     }
     h1 {
@@ -89,7 +94,7 @@
     }
     h3 {
       color: map-get($colors, "green");
-      font-family: 'Noto Sans', sans-serif;
+      font-family: "Noto Sans", sans-serif;
       font-size: calc(1vw + 12px);
       text-align: right;
     }
@@ -102,7 +107,7 @@
       padding: 200px 0;
     }
     &__header {
-      font-family: 'Noto Sans', sans-serif;
+      font-family: "Noto Sans", sans-serif;
       color: map-get($colors, "white");
       font-size: calc(10vw + 24px);
       position: relative;
@@ -139,7 +144,7 @@
       font-family: cursive;
     }
     .text-develop {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: "Courier New", Courier, monospace;
     }
   }
   .section--work {
@@ -159,16 +164,16 @@
       &.is-visible {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);        
+        transform: translateY(0);
       }
       img {
         box-shadow: $shadow-z-5;
         border-radius: $border-radius;
-        transition: .5s;
+        transition: 0.5s;
       }
       @media (min-width: 980px) {
         .mopro {
-          height: 500px;
+          height: 400px;
         }
         .pixel-motion {
           height: 370px;
@@ -180,7 +185,7 @@
     }
     .work-item {
       position: relative;
-      transition: .5s;
+      transition: 0.5s;
       overflow: hidden;
       &:hover {
         img {
@@ -201,8 +206,10 @@
         opacity: 0;
         border-radius: $border-radius;
         @include transition(opacity);
-        h4, h5, p {
-          font-family: 'Noto-Sans', sans-serif;
+        h4,
+        h5,
+        p {
+          font-family: "Noto-Sans", sans-serif;
         }
         h4 {
           font-size: calc(3vw + 12px);
@@ -267,7 +274,7 @@
   $steps: 20;
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
-      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
     }
   }
 }
@@ -275,7 +282,7 @@
   $steps: 20;
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
-      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
     }
   }
 }

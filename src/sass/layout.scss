@@ -187,6 +187,9 @@
       position: relative;
       transition: 0.5s;
       overflow: hidden;
+      img {
+        width: 100%;
+      }
       &:hover {
         img {
           transform: scale(1.1);
